@@ -1,0 +1,23 @@
+#include <stdio.h>
+int main(){
+    int num, a = 0, b = 1, n = 0, i;
+
+    printf("Digite um numero: ");
+    scanf("%d",&num);
+    if (num==0 || num==1) {
+        printf("\n%d pertence a sequencia de Fibonacci",num);
+        return 0;
+    }
+    for (i=0; n<num; i++) {
+        n=a+b;
+        a=b;
+        b=n;
+    }
+    if (n==num) {
+        printf("\n%d pertence a sequencia de Fibonacci",num);
+    } else {
+        printf("\n%d nao pertence a sequencia de Fibonacci",num);
+    }
+
+    return 0;
+}
